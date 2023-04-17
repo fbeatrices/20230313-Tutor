@@ -14,6 +14,7 @@ def my_sd (input):
 
 # 1. Input 
 input = [10,20,30]
+input = [20,23,18]
 
 # 2. Process 
 answer = my_sd (input)
