@@ -4,12 +4,17 @@
 import statistics, math
 
 def my_covariance(input_x, input_y):
-    cov = 0 
-    #
-    # Fill source code here
-    # Calcualte population covariance of two inputs
-    #
-    return cov
+   length = len(input_x)
+   print (f'input x: {input_x} , input y: {input_y}')
+   cov = 0
+
+   mean_x = statistics.mean (input_x)
+   mean_y = statistics.mean (input_y)
+   print (f'mean x: {mean_x} , mean y: {mean_y}')
+
+   cov = sum ([(input_x[i]-mean_x)*(input_y[i]-mean_y) for i in range(length)]) /length
+   
+   return cov
 
 # 1. Input
 input_x = [10,20,30]
@@ -20,4 +25,4 @@ answer = my_covariance(input_x, input_y)
 answer = round(answer, 2)
 
 # 3. Output
-print(f'Answer: {answer}')
+print(f'covariance: {answer}')
